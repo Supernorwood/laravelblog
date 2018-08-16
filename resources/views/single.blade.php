@@ -77,9 +77,16 @@
 
                         </article>
 
+
+                        @if( !empty($Post->user))
+
                         <div class="blog-details-author">
 
+
+
                             <div class="blog-details-author-thumb">
+
+
                                 <img src="{{ asset($post->user->profile->avatar) }}" alt="Author" width="120px" height="120px">
                             </div>
 
@@ -102,7 +109,45 @@
 
                                 </div>
                             </div>
+
                         </div>
+
+                            @else
+
+                            <div class="blog-details-author">
+
+
+
+                                <div class="blog-details-author-thumb">
+
+
+                                    <img src="{{ asset('app/img/blog-details-author.png') }}" alt="Author" width="120px" height="120px">
+                                </div>
+
+                                <div class="blog-details-author-content">
+                                    <div class="author-info">
+                                        <h5 class="author-name">Developer</h5>
+                                        <p class="author-info">SEO Specialist</p>
+                                    </div>
+                                    <p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                        nonummy nibh euismod.
+                                    </p>
+                                    <div class="socials">
+
+                                        <a href="#" class="social__item" target="_blank">
+                                            <img src="{{ asset('app/svg/circle-facebook.svg') }}" alt="facebook">
+                                        </a>
+
+                                        <a href="#" class="social__item" target="_blank">
+                                            <img src="{{ asset('app/svg/youtube.svg') }}" alt="youtube">
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        @endif
 
                         <div class="pagination-arrow">
 

@@ -216,7 +216,7 @@
                         <div class="row">
                             <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                                 <div class="heading">
-                                    <h4 class="h1 heading-title">{{ $myelin->name }}</h4>
+                                    <h4 class="h1 heading-title">{{ $coding->name }}</h4>
                                     <div class="heading-line">
                                         <span class="short-line"></span>
                                         <span class="long-line"></span>
@@ -227,7 +227,7 @@
                         <div class="row">
                             <div class="case-item-wrap">
 
-                                @foreach($myelin->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
+                                @foreach($coding->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
 
 
                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -247,12 +247,15 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="padded-50"></div>
+
                     <div class="offers">
                         <div class="row">
                             <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                                 <div class="heading">
-                                    <h4 class="h1 heading-title">{{ $practice->name }}</h4>
+                                    <h4 class="h1 heading-title">{{ $software->name }}</h4>
                                     <div class="heading-line">
                                         <span class="short-line"></span>
                                         <span class="long-line"></span>
@@ -262,7 +265,7 @@
                         </div>
                         <div class="row">
                             <div class="case-item-wrap">
-                                @foreach($practice->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
+                                @foreach($software->posts()->orderBy('created_at', 'desc')->take(3)->get() as $post)
 
 
                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -281,8 +284,10 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="padded-50"></div>
-                    <div class="offers">
+
+                    {{--<div class="offers">
                         <div class="row">
                             <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                                 <div class="heading">
@@ -317,7 +322,8 @@
 
                             </div>
                         </div>
-                    </div>
+                    </div>--}}
+
                     <div class="padded-50"></div>
                 </div>
             </div>

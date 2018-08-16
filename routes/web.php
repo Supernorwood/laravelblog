@@ -24,7 +24,8 @@ Route::post('/subscribe', function(){
 
 Route::get('/test', function(){
 
-    return App\User::find(1)->profile;
+    //return App\User::find(1)->profile;
+    phpinfo();
 });
 
 Route::get('/',[

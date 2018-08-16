@@ -12,16 +12,35 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
 
-        $user = App\User::create([
+     /*   $user = App\User::create([
 
             'name' => 'Billy',
             'email' => 'billy@gmail.com',
             'password' => bcrypt('password'),
             'admin' => 1
 
-        ]);
+        ]);*/
 
-        App\Profile::create([
+        DB::table('users')->insert(array(
+            array(
+                'name' => 'Greg',
+                'email' => 'greg@gmail.com',
+                'password' => bcrypt('gregory'),
+                'admin' => '1',
+            ),
+            array(
+                'name' => 'David',
+                'email' => 'david@summit.com',
+                'password' => bcrypt('david'),
+                'admin' => '1',
+            ),
+
+
+        ));
+
+
+
+     /*   App\Profile::create([
 
             'user_id' => $user->id,
             'avatar' => 'uploads/avatars/1.png',
@@ -29,7 +48,8 @@ class UsersTableSeeder extends Seeder
             'facebook' => 'facebook.com',
             'youtube' => 'youtube.com'
 
-        ]);
+        ]);*/
+
 
     }
 }
